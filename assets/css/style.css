@@ -14,13 +14,17 @@ ul{
     list-style: none;
 }
 
-
+a{
+    text-decoration: none;
+}
 /* END COMMON Zone*/
 
 /* UTILITIES Zone*/
 :root{
     --bg-primary: #141922;
     --c-text-icon: #fefefe;
+    --bg-sidebar: #060606;
+    --c-playlist: #636363;
 }
 
 .d-flex{
@@ -68,7 +72,92 @@ main{
     width: 200px;
     position: fixed;
     left: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: var(--bg-sidebar);
+    padding: 10px 70px 0px 20px;
 }
+
+#logo{
+    width: 130px;
+}
+
+#menu{
+    margin-top: 15px;
+}
+
+#menu a{
+    color: white;
+}
+
+#menu img{
+    width: 20px;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align:middle;
+}
+
+#playlist{
+    margin-top: 31px;
+    color: white;
+}
+
+#playlist h5{
+    margin-bottom: 1rem;
+}
+
+.playlist-button{
+    background-color: transparent;
+    color: var(--c-playlist);
+    border: none;
+}
+
+.playlist-item{
+    margin-bottom: 10px;
+
+}
+.fa-square-plus{
+    font-size: 40px;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+
+#bottom-sidebar{
+    margin-top: 155px;
+}
+#download-button{
+    background-color: transparent;
+    border: none;
+}
+
+#download-button>span{
+    color: var(--c-playlist);
+}
+
+#download-icon{
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+#user-img{
+    color: white;
+    width: 15px;
+    border-radius: 50%;
+}
+
+#user{
+    color: white;
+    background-color: transparent;
+    
+}
+
+
+
+
+
+
 /* End Sidebar Zone */
 
 
@@ -148,13 +237,7 @@ main{
 .album-cover{
     width: 100%;
 }
-
-
-
-
-
 /* End Main-Container Zone*/
-
 
 /****** END TOP ZONE******/
 
@@ -212,19 +295,19 @@ main{
 
 
 /* DEBUG Zone*/
-
-.debug main{
-}
-
 .debug #sidebar{
     background-color: red;
 }
 
+.debug #main-container{
+    background-color: aqua;
+}
 .debug #top{
-   
+    background-color: blue;
 }
 
 .debug #banner{
+    background-color: lightgreen;
 }
 
 .debug #trackbar{

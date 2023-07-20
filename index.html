@@ -8,13 +8,107 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title> Responsive Spotify</title>
 </head>
-<body class="debug">
+<body>
 
 
    <main class="d-flex">
 
      <!--SIDEBAR-->
-        <section id="sidebar"></section>
+        <section id="sidebar" class="d-flex">
+            <div>
+                <a href="#"><img id="logo" src="./assets/img/logo.svg" alt=""></a>
+                <div id="menu">
+                    <div><a href="#"><img src="./assets/img/home.svg" alt="">Home</a></div>
+                    <div><a href="#"><img src="./assets/img/search.svg" alt="">Cerca</a></div>
+                    <div><a href="#"><img src="./assets/img/libreria.svg" alt="">Libreria
+                    </a></div>
+                </div>
+                <div id="playlist">
+                    <h5>PLAYLIST</h5>
+                    <ul>
+                        <li>
+                            <button class="playlist-button playlist-item d-flex">
+                                <div>
+                                    <i class="fa-solid fa-square-plus"></i>
+                                </div>
+                                <span>
+                                    Crea Playlist
+                                </span>
+                            </button>
+                        </li>    
+                        <li>
+                            <button class="playlist-button playlist-item">
+                                <span>
+                                    Nome Playlist
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="playlist-button playlist-item">
+                                <span>
+                                    Nome Playlist
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="playlist-button playlist-item">
+                                <span>
+                                    Nome Playlist
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="playlist-button playlist-item">
+                                <span>
+                                    Nome Playlist
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="playlist-button playlist-item">
+                                <span>
+                                    Nome Playlist
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="playlist-button playlist-item">
+                                <span>
+                                    Nome Playlist
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="playlist-button playlist-item">
+                                <span>
+                                    Nome Playlist
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div id="bottom-sidebar">
+                    <button class="d-flex playlist-item" id="download-button">
+                        <div id="download-icon">
+                            <img src="./assets/img/download.svg" alt="">
+                        </div>
+                        <span>
+                            Installa app
+                        </span>
+                    </button>
+                    <hr>
+                    <button id="user" class="d-flex">
+                        <div id="user-img">
+                            <img src="./assets/img/profile.svg" alt="">
+                        </div>
+                        <span>
+                            John Doe
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
         
 
         <!--BANNER AND MUSIC SELECTION SECTION-->
