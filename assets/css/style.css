@@ -43,6 +43,10 @@ a{
     justify-content: center;
 }
 
+.j-se{
+    justify-content: space-evenly;
+}
+
 .a-center{
     align-items: center;
 }
@@ -68,10 +72,8 @@ main{
 
 /* Sidebar Zone*/
 #sidebar{
-    height: 90vh;
+    height: calc(100% - 91px);
     width: 200px;
-    position: fixed;
-    left: 0;
     flex-direction: column;
     flex-wrap: wrap;
     background-color: var(--bg-sidebar);
@@ -164,13 +166,9 @@ main{
 
 /****** TOP ZONE******/
 #top{
-    width: 100%;
-    height: 90vh;
+    width: calc(100% - 200px);
+    height: calc(100% - 91px);
     overflow-y:scroll;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding-left: 200px;
 }
 
 /* Banner Zone*/
@@ -202,7 +200,6 @@ main{
 }
 
 #categories-row{
-    width: 100%;
     gap: 1.5em;
     flex-wrap: wrap;
 }
@@ -271,12 +268,18 @@ main{
 }
 
 @media screen and (max-width:475px) {
+
     .album{
         width: calc(100%/2 - 10px) ;
     } 
 }
 
 @media screen and (max-width:375px) {
+    
+    #top{
+        width: calc(100% - 50px);
+    }
+    
     #sidebar{
         width: 50px;
     }
@@ -287,14 +290,10 @@ main{
         display: none;
     }
 
-    #top{
-        padding-left: 50px;
+    #categories-row div{
+        width: calc(100%/4 - 25px);
     }
-
-    #categories-row{
-        
-    }
-
+    
     #small-logo{
         width:  65%;
         margin: 0 auto;
