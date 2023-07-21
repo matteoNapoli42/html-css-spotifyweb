@@ -58,6 +58,9 @@ a{
     align-items: center;
 }
 
+.circle{
+    border-radius: 50%;
+}
 
 .anim-hov-white:hover{
     color: white;
@@ -276,6 +279,11 @@ main{
     width: 100%;
 }
 
+.album-cover:hover{
+    opacity: 0.3;
+    cursor: pointer;
+}
+
 /* End Main-Container Zone*/
 
 /****** END TOP ZONE******/
@@ -294,7 +302,6 @@ main{
 #track-details{
     padding: 15px;
     gap: 10px;
-    margin: auto 0;
     width: 20%;
 }
 
@@ -375,7 +382,8 @@ main{
 }
 
 #right-bar{
-    width: 60%; 
+    width: 100%; 
+    padding-right: 50px;
 }
 
 
@@ -473,6 +481,27 @@ main{
     }
     #bottom-sidebar{
        margin-top: 33rem;
+    }
+
+    #track-details{
+        padding-left: 0;
+    }
+    #track-menu-options{
+        margin-left: 0;
+    }
+    #track-details>*{
+        scale: 75% 100%;
+        width: 33%;
+    }
+
+    #track-control{
+        width: 33%;
+        scale: 75% 100%;
+    }
+
+    #track-buttons{
+        scale: 55% 100%;
+        width: 33%;
     }
 }
 
