@@ -57,6 +57,12 @@ a{
 .a-center{
     align-items: center;
 }
+
+
+.anim-hov-white:hover{
+    color: white;
+    cursor: pointer;
+}
 /* END UTILITIES Zoner*/
 
 
@@ -289,16 +295,14 @@ main{
     padding: 15px;
     gap: 10px;
     margin: auto 0;
-    flex-basis: 20%;
+    width: 20%;
 }
-
 
 #track-details h6{
     color: white;
-
 }
+
 #track-details span{
-    color: var(--c-playlist);
     font-size: x-small;
 }
 
@@ -317,7 +321,7 @@ main{
 /*Central Trackbar Zone*/
 #track-control{
     flex-wrap: wrap;
-    flex-basis: 60%;
+    width: 60%;
 }
 
 #control-buttons{
@@ -329,6 +333,11 @@ main{
     border: solid 2px white;
     border-radius: 50%;
     padding: 5px;
+}
+
+#play-button:hover{
+    padding: 8px;
+    cursor: pointer;
 }
 
 #control-slidebar{
@@ -346,8 +355,8 @@ main{
 }
 
 .greyline{
-    border: 2px solid white;
-    background-color: white;
+    border: 3px solid white;
+    background-color: var(--c-playlist);
     height: 5px;
     border-radius: 10%;
     opacity: 0.3;
@@ -358,7 +367,7 @@ main{
 
 #track-buttons{
     gap: 15px;
-    flex-basis: 20%;
+    width: 20%;
 }
 
 #track-buttons i{
@@ -366,7 +375,7 @@ main{
 }
 
 #right-bar{
-    flex-basis: 60%; 
+    width: 60%; 
 }
 
 
@@ -402,14 +411,14 @@ main{
     }
 
     #track-details{
-        flex-basis: 25%;
+        width: 25%;
     }
     #track-control{
-        flex-basis:50%;
+        width:50%;
     }
     
     #track-buttons{
-        flex-basis: 25%;
+        width: 25%;
     }
    
 }
@@ -423,7 +432,7 @@ main{
     .album{
         width: calc(100%/2 - 10px) ;
     } 
-    
+
     #track-menu-options{
         flex-direction: column;
         margin-left: 15px;
