@@ -14,8 +14,13 @@ ul{
     list-style: none;
 }
 
+li{
+    margin-bottom: 10px;
+}
+
 a{
     text-decoration: none;
+    color: var(--c-playlist);
 }
 /* END COMMON Zone*/
 
@@ -26,6 +31,7 @@ a{
     --bg-sidebar: #060606;
     --c-playlist: #636363;
     --bg-trackbar: #363637;
+    --bg-banner: #101319;
 }
 
 .d-flex{
@@ -51,14 +57,10 @@ a{
 .a-center{
     align-items: center;
 }
-
-.pos-rel{
-    position: relative;
-}
-
-
-
 /* END UTILITIES Zoner*/
+
+
+
 
 /**************************************************************************
                                 MAIN ZONE
@@ -80,8 +82,21 @@ main{
     background-color: var(--bg-sidebar);
     padding: 10px 70px 0px 20px;
     overflow-y: auto;
-    overflow-x:hidden
+    overflow-x:hidden;
 }
+
+
+.sidebar-item{
+    color: var(--c-playlist);
+}
+
+.sidebar-item:hover{
+    color: white;
+    cursor: pointer;
+    border-left: lightgreen 2px solid;
+    
+}
+
 
 #logo{
     width: 130px;
@@ -93,10 +108,6 @@ main{
 
 #menu{
     margin-top: 15px;
-}
-
-#menu span{
-    color: white;
 }
 
 #menu img{
@@ -115,38 +126,25 @@ main{
     margin-bottom: 1rem;
 }
 
-.playlist-button{
-    background-color: transparent;
-    color: var(--c-playlist);
-    border: none;
-    
-}
 
-.playlist-button div{
-    vertical-align:baseline;
-}
 
 .playlist-item{
     margin-bottom: 10px;
-
 }
+
 .fa-square-plus{
     font-size: 40px;
     vertical-align: middle;
     padding-right: 10px;
 }
 
-#download-button{
-    background-color: transparent;
-    border: none;
-}
 
-#download-button>span{
+#install{
     color: var(--c-playlist);
 }
 
 #download-icon{
-    width: 15px;
+    width: 25px;
     height: 15px;
     margin-right: 10px;
 }
@@ -155,10 +153,18 @@ main{
     margin-top: 100%;
 }
 
+#user{
+    margin-top: 10px;
+    align-items: center;
+}
+
 #user-img{
-    color: white;
-    width: 15px;
+    color:var(--c-playlist);
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
+    border: 1px solid white;
+    padding: 3px;
 }
 
 #user{
@@ -185,13 +191,21 @@ main{
     position: sticky;
     right: 0;
     z-index: 1;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-banner);
 }
 
 #banner button{
     border-radius: 50px;
-    padding: 10px;
+    border: 2px solid white;
+    padding: 13px 40px;
     margin-right: 10px;
+    background-color: transparent;
+    color: white;
+}
+
+#banner button:hover{
+    padding: 20px 50px;
+    cursor: pointer;
 }
 /* End Banner Zone*/
 
@@ -215,8 +229,20 @@ main{
 
 #categories-row a{
     text-decoration: none;
-    color: var(--c-text-icon);
+    color: var(--c-playlist);
+    font-weight:800;
 }
+
+#categories-row a:hover{
+    color: white;
+}
+
+#media-type-animation{
+    width: 40%;
+    margin: 5px auto;
+    border: 2px solid lightgreen;
+}
+
 
 .recently-played{
     color: var(--c-text-icon);
@@ -243,28 +269,27 @@ main{
 .album-cover{
     width: 100%;
 }
+
 /* End Main-Container Zone*/
 
 /****** END TOP ZONE******/
 
 
-/* Trarckbar Zone*/
+/*********************** Trackkbar Zone****************/
 #trackbar{
     height: 91px;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     bottom: 0;
     background-color: var(--bg-trackbar);
 }
 
-#track-menu{
-    height: 50%;
-    margin: auto 0;
-}
-
+/*Left Trackbar Zone*/
 #track-details{
     padding: 15px;
     gap: 10px;
+    margin: auto 0;
+    flex-basis: 20%;
 }
 
 
@@ -282,13 +307,74 @@ main{
 }
 
 #track-menu-options{
-    margin-left: 25px;
+    margin-left: 30px;
     color: var(--c-playlist);
+    gap: 10px;
+}
+/* End Left Trackbar Zone*/
+
+
+/*Central Trackbar Zone*/
+#track-control{
+    flex-wrap: wrap;
+    flex-basis: 60%;
+}
+
+#control-buttons{
+    gap: 24px;
+    color: white;
+}
+
+#play-button{
+    border: solid 2px white;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+#control-slidebar{
+    margin-top: 10px;
+}
+
+#control-slidebar h6{
+    color: white;
+}
+
+.bar{
+    width: 50%;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.greyline{
+    border: 2px solid white;
+    background-color: white;
+    height: 5px;
+    border-radius: 10%;
+    opacity: 0.3;
+}
+/*End Central Trackbar Zone*/
+
+/*Right Trackbar Zone*/
+
+#track-buttons{
+    gap: 15px;
+    flex-basis: 20%;
+}
+
+#track-buttons i{
+    color: white;
+}
+
+#right-bar{
+    flex-basis: 60%; 
 }
 
 
 
-/* End Trarckbar Zone*/
+/* End Right Trackbar Zone*/
+
+
+/******************** End Trarckbar Zone*********************/
 
 
 /**************************************************************************
@@ -314,6 +400,18 @@ main{
     .album{
         width: calc(100%/4 - 20px);
     }
+
+    #track-details{
+        flex-basis: 25%;
+    }
+    #track-control{
+        flex-basis:50%;
+    }
+    
+    #track-buttons{
+        flex-basis: 25%;
+    }
+   
 }
 
 @media screen and (max-width:475px) {
@@ -325,6 +423,16 @@ main{
     .album{
         width: calc(100%/2 - 10px) ;
     } 
+    
+    #track-menu-options{
+        flex-direction: column;
+        margin-left: 15px;
+    }
+    
+    .bar{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
 }
 
 @media screen and (max-width:375px) {
@@ -335,6 +443,7 @@ main{
     
     #sidebar{
         width: 50px;
+        padding-left: 15px;
     }
 
     #logo,#bottom-sidebar span,
@@ -353,11 +462,6 @@ main{
         display: inline;
 
     }
-    
-    #sidebar{
-        padding-left: 15px;
-    }
-    
     #bottom-sidebar{
        margin-top: 33rem;
     }
