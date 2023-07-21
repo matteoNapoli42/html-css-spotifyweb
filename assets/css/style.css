@@ -82,11 +82,15 @@ main{
     width: 130px;
 }
 
+#small-logo{
+    display: none;
+}
+
 #menu{
     margin-top: 15px;
 }
 
-#menu a{
+#menu span{
     color: white;
 }
 
@@ -152,9 +156,6 @@ main{
     background-color: transparent;
     
 }
-
-
-
 
 
 
@@ -272,7 +273,6 @@ main{
 @media screen and (max-width:475px) {
     .album{
         width: calc(100%/2 - 10px) ;
-
     } 
 }
 
@@ -280,8 +280,34 @@ main{
     #sidebar{
         width: 50px;
     }
+
+    #logo,#bottom-sidebar span,
+    #bottom-sidebar hr,#playlist,
+    #menu span{
+        display: none;
+    }
+
     #top{
         padding-left: 50px;
+    }
+
+    #categories-row{
+        
+    }
+
+    #small-logo{
+        width:  65%;
+        margin: 0 auto;
+        display: inline;
+
+    }
+    
+    #sidebar{
+        padding-left: 15px;
+    }
+    
+    #bottom-sidebar{
+       margin-top: 33rem;
     }
 }
 
