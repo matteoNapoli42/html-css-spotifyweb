@@ -475,6 +475,10 @@ main{
         flex-direction: column;
         margin-left: 15px;
     }
+
+    #track-control{
+        margin-left: 25px;
+    }
     
     .bar{
         margin-left: 5px;
