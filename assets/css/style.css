@@ -66,6 +66,12 @@ a{
     color: white;
     cursor: pointer;
 }
+
+.p-rel{
+    position: relative;
+}
+
+ 
 /* END UTILITIES Zoner*/
 
 
@@ -90,10 +96,8 @@ main{
     flex-wrap: wrap;
     background-color: var(--bg-sidebar);
     padding: 10px 70px 0px 20px;
-    overflow-y: auto;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
-
 
 .sidebar-item{
     color: var(--c-playlist);
@@ -103,9 +107,7 @@ main{
     color: white;
     cursor: pointer;
     border-left: lightgreen 2px solid;
-    
 }
-
 
 #logo{
     width: 130px;
@@ -134,8 +136,6 @@ main{
 #playlist h5{
     margin-bottom: 1rem;
 }
-
-
 
 .playlist-item{
     margin-bottom: 10px;
@@ -279,10 +279,26 @@ main{
     width: 100%;
 }
 
-.album-cover:hover{
-    opacity: 0.3;
+.h-play{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: none;
     cursor: pointer;
 }
+
+.h-play i{
+    position: absolute;
+    top: 40%;
+    left: 46%;
+    font-size: 2rem;
+}
+
+.album:hover .h-play{
+    display: inline;
+}
+
 
 /* End Main-Container Zone*/
 
@@ -362,11 +378,25 @@ main{
 }
 
 .greyline{
-    border: 3px solid white;
+    border: 3px solid grey;
     background-color: var(--c-playlist);
     height: 5px;
     border-radius: 10%;
     opacity: 0.3;
+}
+
+.underline{
+    position: relative;
+    width: 25%;
+    border: 3px solid white;
+    margin-right: 100rem;
+    bottom: 3px;
+    left: -3px;
+}
+
+.underline:hover{
+    border: 3px solid green;
+    cursor: pointer;
 }
 /*End Central Trackbar Zone*/
 
@@ -383,7 +413,7 @@ main{
 
 #right-bar{
     width: 100%; 
-    padding-right: 50px;
+    padding-right: 50%;
 }
 
 
@@ -489,7 +519,8 @@ main{
     #track-menu-options{
         margin-left: 0;
     }
-    #track-details>*{
+    
+    #track-details{
         scale: 75% 100%;
         width: 33%;
     }
